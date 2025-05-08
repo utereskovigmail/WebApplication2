@@ -1,0 +1,7 @@
+/Users/utereskovygmail.com/Desktop/folddd/WebApplication2
+/Users/utereskovygmail.com/Desktop/folddd/appsettings.Development.json
+/Users/utereskovygmail.com/Desktop/folddd/appsettings.json
+/Users/utereskovygmail.com/Desktop/folddd/WebApplication2.dll
+/Users/utereskovygmail.com/Desktop/folddd/WebApplication2.deps.json
+/Users/utereskovygmail.com/Desktop/folddd/WebApplication2.runtimeconfig.json
+/Users/utereskovygmail.com/Desktop/folddd/WebApplication2.pdb

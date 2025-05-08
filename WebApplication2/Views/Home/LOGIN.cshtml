@@ -1,0 +1,122 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+</head>
+<style>
+    body{
+        width: 100%;
+        height: 100vh;
+        background-color: #eefcf6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 750px;
+        background-color: white;
+        align-items: center;
+        border-radius: 10px;
+    }
+    .Details{
+        width: 100%;
+        display: flex;
+        background-color: black;
+
+        border-bottom-right-radius:  10px;
+        border-bottom-left-radius:  10px;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+    .Details h1,p{
+        color: white;
+    }
+    .Details h1{
+        font-size: 24px;
+    }
+    .Details div{
+        margin: 0 20px;
+    }
+    form{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        margin: 60px;
+        align-items: center;
+    }
+
+    form input[type="text"],
+    form input[type="password"] {
+        width: 100%;
+        padding: 5px;
+        padding-left: 0;
+        margin: 20px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        outline: none;
+        font-size: 16px;
+
+    }
+
+    form input[type="submit"]{
+        width: 100%;
+        background-color: #3edc91;
+        border:none;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 18px;
+        margin:20px;
+        transition: all 200ms ease;
+    }
+
+    form input[type="submit"]:hover{
+        background-color: #19bc70;
+        cursor: pointer;
+    }
+
+    .error-message {
+        color: red;
+        margin-bottom: -40px;
+        font-weight: bold;
+    }
+</style>
+<body>
+
+
+<div class="main">
+    @if (ViewBag.LoginError != null)
+    {
+        <div class="error-message">@ViewBag.LoginError</div>
+    }
+    <form action="@Url.Action("Check")" method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+    </form>
+
+    <div class="Details">
+        <div>
+            <h1>Accepted usernames are:</h1>
+            <p>standard_user</p>
+            <p>locked_out_user</p>
+            <p>problem_user</p>
+        </div>
+
+        <div>
+            <h1>Password for all users:</h1>
+            <p>secret_sauce</p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
