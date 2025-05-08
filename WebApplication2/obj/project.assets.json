@@ -1,11 +1,13 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net8.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net8.0": [
+      "Microsoft.AspNetCore.StaticFiles >= 7.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/utereskovygmail.com/.nuget/packages/": {}
@@ -23,14 +25,14 @@
         "/Users/utereskovygmail.com/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net9.0"
+        "net8.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {}
         }
       },
@@ -47,8 +49,14 @@
       "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
-      "net9.0": {
-        "targetAlias": "net9.0",
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.StaticFiles": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -71,5 +79,16 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.AspNetCore.StaticFiles with version (>= 7.0.0)\n  - Found 29 version(s) in nuget.org [ Nearest version: 2.3.0 ]",
+      "libraryId": "Microsoft.AspNetCore.StaticFiles",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
